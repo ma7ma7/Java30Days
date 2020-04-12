@@ -1,24 +1,24 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class SweetProgramme {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		
-		System.out.println("Enter your name : ");
-//		Scanner sn = new Scanner(System.in);
-//		String s = sn.nextLine();
-//		
-//		if (s.equals("mahmoud")) {
-//			
-//			System.out.println("YOur welcome");
-//		}
-//		
-		int i = 0;
+		Scanner sn = new Scanner(new File("students.txt"));
 		
-		while(i < 10) {
-			System.out.println(i);
-			i++;
+		List<String> students = new ArrayList<String>();
+		
+		while(sn.hasNextLine() ) {
+			students.add(sn.nextLine());
 		}
 		
-//		sn.close();
+		for (int i = 0; i < students.size(); i++) {
+			System.out.println("Name : " + students.get(i));
+		}
+		
+		sn.close();
 	}
 }
