@@ -7,13 +7,13 @@ public class SweetProgramme {
 		
 		LinkedList<String> names = new LinkedList<String>();
 		
-		names.add("mahmoud");
-		names.add("amane");
-		names.add("last");
+		names.push("mahmoud");
+		names.push("amane");
+		names.push("last");
 		
 		// Iterate LinkedList as a queue 		
+		System.out.println(names.pop());
 		System.out.println(names.remove());
-		System.out.println(names.remove());
-		System.out.println(names.remove());
+		System.out.println(names.removeFirst());
 	}
 }
