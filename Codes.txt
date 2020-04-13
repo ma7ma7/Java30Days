@@ -1,0 +1,14 @@
+To create a Scanner :
+---------------------
+Scanner sn = new Scanner(new File("students.txt"));
+Here we read data from a file
+
+To read data from the file :
+--------------------------
+while(sn.hasNextLine() ) {
+	students.add(sn.nextLine());
+}
+
+for (int i = 0; i < students.size(); i++) {
+	System.out.println("Name : " + students.get(i));
+}
