@@ -1,32 +1,20 @@
-import java.io.FileNotFoundException;
-import java.util.Iterator;
-import java.util.LinkedList;
-
 
 public class SweetProgramme {
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) {
 		
-		LinkedList<String> names = new LinkedList<String>();
+		int[][] data = {
+				{1, 2 , 3},
+				{1, 2 , 3, 4, 5},
+				{1, 2 , 3, 4, 5, 6, 7},
+		};
 		
-		names.push("mahmoud");
-		names.push("amane");
-		names.push("last");
-		
-		Iterator<String> it = names.iterator();
-		
-		while(it.hasNext()) {
-			System.out.println(it.next());
+		for(int i=0; i < data.length; i++) {
+			for(int j=0; j < data[i].length; j++) {
+				System.out.print(data[i][j] + ",");
+			}
+			System.out.println();
 		}
 		
-		names.add(2, "added");
 		
-		for(String s: names) {
-			System.out.println(s);
-		}
-		
-		// Iterate LinkedList as a queue 		
-//		System.out.println(names.pop());
-//		System.out.println(names.remove());
-//		System.out.println(names.removeFirst());
 	}
 }
